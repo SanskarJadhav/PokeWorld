@@ -1,0 +1,17 @@
+button {
+  width: 100%;
+  height: 45px;
+  background-color: #ffff00;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: navy;
+  font-weight: 500;
+}
+button:hover{
+  /* invert colours upon hover */
+  background-color: navy;
+  color: #ffff00;
+}
