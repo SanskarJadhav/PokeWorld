@@ -1,0 +1,85 @@
+.profile-container {
+  max-width: 600px;
+  max-height: 60vh;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  color: white;
+  text-shadow: 0 0 4px black;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-container.closed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.profile-details {
+  margin-top: 20px;
+}
+
+.profile-details button {
+  background-color: red;
+  color: white;
+  width: fit-content;
+  padding: 0 10px;
+  margin: 15px 0 15px 0;
+}
+
+.profile-details button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+.profile-details-item {
+  margin: 0 5px 10px 5px;
+}
+
+.profile-details-item strong {
+  font-weight: bold;
+}
+
+.profile-details em {
+  font-size: small;
+  color: gold;
+}
+
+.profile-pokemon-collected {
+  text-align: center;
+}
+
+.profile-pokemon-list {
+  margin-top: 10px;
+  max-height: 20vh;
+  overflow-y: auto;
+  scrollbar-color: white rgba(0,0,0,0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-pokemon-list-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  width: calc(33.33% - 10px);
+  box-sizing: border-box;
+  pointer-events: auto;
+  cursor: pointer;
+}

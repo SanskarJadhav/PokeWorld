@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    /* to create float effect, set intial margins to zero */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.card-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6vh;
+    background-image: url("../assets/background2.jpg");
+    background-size: cover;
+    
+}
+.card-container h1 {
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 8px black;
+    color: #fff;
+}
+
+.row {
+    margin-top: 10px; /* Add some space above the cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

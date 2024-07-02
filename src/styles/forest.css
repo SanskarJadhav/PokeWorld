@@ -1,0 +1,76 @@
+.forest-container {
+    max-width: 600px;
+    height: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    transition: all 0.3s ease;
+    opacity: 1; /* default to visible */
+    visibility: visible;
+  }
+  
+  .forest-container.closed {
+    opacity: 0; /* invisible when closed */
+    visibility: hidden; /* hidden when closed */
+    pointer-events: none;
+  }
+
+  .forest-container h2{
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 0px 5px 15px black;
+  }
+  
+  .random-pokemon {
+    text-align: center;
+  }
+  
+  .random-pokemon img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+  
+  .random-pokemon h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  
+  .random-pokemon p {
+    margin-bottom: 10px;
+  }
+  
+  .random-pokemon button {
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 16px;
+    border: none;
+    background-color: #d80c0c;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .random-pokemon button:hover {
+    background-color: #991010;
+    color: #fff;
+  }
+
+  /* in case it takes time to load */
+  .loading-spinner {
+    background-image: url('../assets/pokeball.png');
+    border: 5px solid #f3f3f3; 
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 1s linear infinite; /* Apply rotation animation */
+    margin: 0 auto; /* Center the spinner */
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

@@ -1,0 +1,99 @@
+.region {
+    position: relative; /* Changed to relative */
+    height: 100vh;
+    justify-content: center;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/ambientbg.jpg");
+    background-size: cover;
+  }
+
+  .content {
+    z-index: 3;
+    color: #fff;
+    display: none;
+  }
+  
+  .content.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    left: 50%;
+    bottom: 7%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+  
+  .content.active h1 {
+    color: gold;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4em;
+    text-shadow: 0 0 15px goldenrod;
+    -webkit-text-stroke: 3px blue;
+  }
+
+  .content.active p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+  }
+
+  .content button {
+    background-color: #fff;
+    padding: auto 35px;
+    color: blue;
+    font-size: 1.1em;
+    font-weight: 500;
+    width: 270px;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  .content button:hover {
+    background-color: gold;
+    color:#fff;
+  }
+  
+  .video {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .videobox {
+    position: absolute;
+    transform: translateY(-14%);
+    width: 60%;
+    max-height: 65%;
+    left: 20%; /* Center video horizontally */
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+  
+  .videobox.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transition: 0.9s ease;
+    transition-property: clip-path;
+  }  
+  
+  .nav-arrows {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .arrow {
+    color: white;
+    font-size: 15vw;
+    padding: 0% 8%;
+    cursor: pointer;
+  }
+  
+  .arrow:hover {
+    color: gold;
+  }
+  

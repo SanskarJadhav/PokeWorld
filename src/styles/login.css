@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    /* to create float effect, set intial margins to zero */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.loginpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* span across entire viewport size */
+    height: 100vh;
+    width: 100vw;
+    padding-top: 40px;
+    background-image: url("../assets/background1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.wrapper {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    min-width: 300px;
+    min-height: 480px;
+    /* gradient of blue as background colour */
+    background: linear-gradient(90deg, #1c5fb1, #2f0d4f);
+    border-radius: 50px;
+    /* 3d depth effect using shadow */
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    padding: 65px;
+    display: flex;
+    align-items: center;
+    /* image overflows so to limit it to wrapper shape */
+    overflow: hidden; 
+}
+.wrapper img {
+    position: absolute;
+    right: -24px;
+    bottom: -18px;
+    width: 50%;
+}
+.form-wrapper {
+    /* form in wrapper appears above */
+    z-index: 1;
+    width: 40%;
+}
+.wrapper .form-wrapper.login {
+    position: absolute;
+    margin-top: 25px;
+    /* creates float down effect */
+    transition: .5s ease-in-out;
+    transition-delay: .2s;
+    width: 40%;
+}
+
+.wrapper .form-wrapper.register {
+    position: absolute;
+    margin-top: 15px;
+    /* creates float up effect */
+    transition: .5s ease-in-out;
+    transition-delay: .2s;
+    width: 40%;
+}
+
+.wrapper .form-wrapper h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    /* vertical spacing between input boxes */
+    margin: 30px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    /* removes the default black outline when entering input */
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    /* padding on left and right */
+    padding: 0 30px 0 30px;
+}
+.input-box input::-ms-reveal {
+    /* makes password reveal icon white instead of default black*/
+    filter: invert(100%);
+  }
+.input-box input::placeholder {
+    /* placeholder text should be lighter blue */
+    color: rgba(147, 195, 230, 0.5);
+}
+.input-box input[type="password"] + .error{
+    color: white;
+    font-size: 12px;
+}
+
+.sign-link {
+    font-size: .9em;
+    text-align: center;
+    margin-top: 25px;
+}
+.sign-link p {
+    color: #fff;
+}
+.sign-link button {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    padding: 0.25rem;
+}
+.sign-link button:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+.z-index-alert {
+    z-index: 100; /* or any higher value */
+    display: inline-block;
+    justify-self: center;
+    width: fit-content;
+}
